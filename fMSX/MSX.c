@@ -54,6 +54,11 @@ extern retro_log_printf_t log_cb;
 #define chdir(a) 0
 #endif
 
+#if defined(SF2000)
+#define	getcwd(a,b)	"/mnt/sda1/ROMS/save/"
+#define chdir(a) 0
+#endif
+
 /** User-defined parameters for fMSX *************************/
 int  Mode        = MSX_MSX2|MSX_NTSC|MSX_MSXDOS2|MSX_GUESSA|MSX_GUESSB;
 uint8_t UPeriod  = 75;             /* % of frames to draw    */
