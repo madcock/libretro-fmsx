@@ -86,7 +86,7 @@ extern int VPeriod;
 extern uint8_t DiskROMLoaded;
 bool require_disk_rom = false;
 
-#define SND_RATE 48000
+#define SND_RATE 44100
 
 // in screen mode 6 & 7 (512px wide), Wide.h doubles WIDTH
 #define BORDER 8
@@ -95,7 +95,7 @@ bool require_disk_rom = false;
 #define MAX_HEIGHT      (256+BORDER)
 #define MAX_SCANLINE    (PALVideo?255:242)
 
-#ifdef PSP
+#ifdef PSP || SF2000
 #define PIXEL(R,G,B)    (uint16_t)(((31*(B)/255)<<11)|((63*(G)/255)<<5)|(31*(R)/255))
 #elif defined(PS2)
 #define PIXEL(R,G,B)    (uint16_t)(((31*(B)/255)<<10)|((31*(G)/255)<<5)|(31*(R)/255))
